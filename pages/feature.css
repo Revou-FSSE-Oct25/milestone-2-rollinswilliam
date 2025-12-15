@@ -1,0 +1,50 @@
+.numbush-icon {
+    width: 30vw;
+    height: 60vh;
+    /* background-image: url('/images/Icon/numbush.png'); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+    
+}
+
+.jakepo-icon {
+    width: 30vw;
+    height: 60vh;
+    /* background-image: url('/images/Icon/jakepo.png'); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+}
+
+.meowcage-icon {
+    width: 30vw;
+    height: 60vh;
+    /* background-image: url('/images/Icon/meowcage.png'); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+}
+
+.icon-games {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    gap: 10px;
+}
+
+.icon-games nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-section-2 h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}

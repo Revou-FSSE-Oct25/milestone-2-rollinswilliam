@@ -1,0 +1,130 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: #ffffff;
+    list-style-type: none;  
+    background-color: #2b2b2b;
+    font-family: 'inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.main-section-1 {
+    scroll-snap-align: start;
+    height: 100vh;
+    align-content: center;
+    padding: 20px;
+}
+
+.main-section-1 h2 {
+    text-align: ;
+    font-size: 3.5rem;
+}
+
+.main-section-1 h3, .main-section-1 p {
+    text-align: justify;
+    font-size: 2rem;
+}
+
+.main-section-2 {
+    scroll-snap-align: start;
+    height: 100vh;
+    align-content: center;
+}
+
+.main-section-3 {
+    scroll-snap-align: start;
+    height: 100vh;
+    /* align-content: center; */
+    /* padding: 10px; */
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-section-3 nav {
+    text-align: center;
+}
+
+.main-section-3 nav a {
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+    color: #0095ff;
+    font-size: 1.5rem;
+}
+
+.main-section-3 h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.main-section-3 p {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin: 0 100px;
+    line-height: 1.5;
+}
+
+
+.article-a {;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.article-b {
+    background-color: rgb(11, 12, 13);
+    text-align: center;
+    width: 100%;;
+}
+
+.article-b p {
+    font-size: 1 rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+header {    
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: space-between;
+}
+header ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 20px;
+    list-style-type: none; 
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: #0095ff;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin: 20px 30px;
+    font-size: 4rem;
+    color: #0095ff;
+    font-weight: 900;
+}
+
