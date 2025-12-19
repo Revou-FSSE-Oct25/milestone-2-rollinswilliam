@@ -1,0 +1,134 @@
+body {
+    background-image: url(/images/Icon/meowcage/background-new.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul{
+    padding: 0;
+    margin: 0;
+}
+
+
+header nav ul li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.homepage-icon {
+    width: 10vw;
+    height: 20vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 3.5rem;
+    margin: 5px 20px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
+.bg-game {
+    width: 60vw;
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.life-point {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 5px 20px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    max-width: 500px;
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.healthBar {
+    display: flex;
+    gap: 10px;
+}
+
+.heart {
+    font-size: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.heart.lost {
+    opacity: 0.2;
+    transform: scale(0.5);
+}
+
+/* game-board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* border: black 2px solid; */
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 15px;
+    /* 3D perspective */
+    perspective: 1000px;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.card {
+    border-radius: 10px;
+    background: linear-gradient(145deg, #3498db, #2980b9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    width: 84%;
+    height: 62%;
+    object-fit:contain; 
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    flex-direction: column;
+}
+
+
+.card .flipped{
+  transform: rotateY(180deg);
+}

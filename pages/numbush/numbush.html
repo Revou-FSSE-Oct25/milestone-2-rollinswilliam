@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/numbush/numbush.css">
+    <title>Numbush Game</title>
+     <!-- GoogleFont -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>D'G</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><img src="/images/Icon/meowcage/homepage.png" alt="homepage-icon" class="homepage-icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bg-game">
+            <h2>Welcome to Numbush!</h2>
+            <p>Hit the click button as many times as you can before time runs out!</p>
+        <div class="gameboard">
+            <button id="startButton" class="start-button">Start</button>
+
+            <div id="infoGame" class="hidden">
+                <p id="timer">Time: 20</p>
+                <p id="score">Score: </p>
+            </div>
+
+            <button id="clickButton" class="hidden">Click</button>
+        </div>
+    </main>
+    <script src="/pages/numbush/numbush.js"></script>
+</body>
+</html>
