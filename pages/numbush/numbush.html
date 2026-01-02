@@ -22,6 +22,7 @@
         <section class="bg-game">
             <h2>Welcome to Numbush!</h2>
             <p>Hit the click button as many times as you can before time runs out!</p>
+            <h3>Target Score: 110</h3>
         <div class="gameboard">
             <button id="startButton" class="start-button">Start</button>
 
@@ -31,8 +32,55 @@
             </div>
 
             <button id="clickButton" class="hidden">Click</button>
+            <button id="resetButton" class="hidden">Reset</button>
         </div>
+        </section>
     </main>
-    <script src="/pages/numbush/numbush.js"></script>
+    <script>
+const start = document.getElementById('startButton')
+const button = document.getElementById('clickButton')
+const scorePoint = document.getElementById('score')
+const infoGame = document.getElementById('infoGame')
+const resetBtn = document.getElementById('resetButton')
+
+let score = 0;
+let timer = 20;
+
+infoGame.classList.add('hidden')
+button.classList.add('hidden')
+
+function startGame() {
+    infoGame.classList.remove('hidden');
+    button.classList.remove('hidden');
+    start.classList.add('hidden');
+
+    const countDown = setInterval(() => {
+            if (timer > 0) {
+                timer--;
+                document.getElementById('timer').textContent = `Time: ${timer}`;
+            } else if (score >= 110) {
+                clearInterval(countDown);
+                button.classList.add('hidden');
+                infoGame.innerHTML =`<h2>You Win!</h2>
+                <p>Your final score is: ${score}</p>`;
+                resetBtn.classList.remove('hidden')
+            } else {
+                clearInterval(countDown);
+                button.classList.add('hidden');
+                infoGame.innerHTML = `<h2>Game Over!</h2>
+                <p>Your final score is: ${score}</p>`;
+                resetBtn.classList.remove('hidden')
+            };
+        }, 1000); 
+};
+
+button.addEventListener('click', () => {
+    score++;
+    scorePoint.textContent = `Score: ${score}`;
+});
+
+start.addEventListener('click', startGame);
+resetBtn.addEventListener('click', startGame);
+    </script>
 </body>
 </html>

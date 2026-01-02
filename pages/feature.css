@@ -1,13 +1,5 @@
-.numbush-icon {
-    width: 30vw;
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    border-radius: 100px;
-    
-}
 
-.jakepo-icon {
+.icon {
     width: 30vw;
     height: 60vh;
     background-size: cover;
@@ -15,13 +7,6 @@
     border-radius: 100px;
 }
 
-.meowcage-icon {
-    width: 30vw;
-    height: 60vh;
-    background-size: cover;
-    background-position: center;
-    border-radius: 100px;
-}
 
 .icon-games {
     display: flex;
