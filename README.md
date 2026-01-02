@@ -1,21 +1,19 @@
 # D'Games - Interactive Web Games Collection
 
-![D'Games Logo](images/Icon/dgames-logo.png) *If you have a logo, replace this text with an actual image*
-
 ## Overview
 D'Games is an interactive web application featuring a collection of fun and challenging games designed to test different cognitive skills. The platform offers three unique games, each focusing on different aspects of mental agility and problem-solving.
 
 ## Features
 
 ### 1. Numbush
-- A number guessing game that tests your mathematical intuition
-- Challenge yourself to find the hidden number within limited attempts
-- Tracks your score and provides feedback on your guesses
+- A big button appears on the screen.
+- Every time the player clicks it, the score increases.
+- After a certain time limit, the game ends and displays the final score
 
-### 2. JakePo (Rock-Paper-Scissors)
-- Classic rock-paper-scissors game with a modern twist
-- Play against the computer with instant results
-- Clean, intuitive interface for quick gameplay
+### 2. FindMeow (Guest the Number)
+- The computer randomly selects a number (e.g., between 1-100).
+- The player tries to guess the number.
+- The game provides hints: “Too high” or “Too low.”
 
 ### 3. MeowCage (Memory Game)
 - Test your memory with this engaging card-matching game
@@ -53,7 +51,7 @@ D'Games is an interactive web application featuring a collection of fun and chal
 milestone-2-rollinswilliam/
 ├── images/                 # Game assets and icons
 ├── pages/                  # Individual game pages
-│   ├── jakepo/             # Rock-Paper-Scissors game
+│   ├── findmeow/           # Guest the Number
 │   ├── meowcage/           # Memory game
 │   └── numbush/            # Number guessing game
 ├── index.html             # Main entry point
@@ -65,39 +63,24 @@ milestone-2-rollinswilliam/
 ## Screenshots
 
 ### Main Menu
-![Main Menu](images/screenshots/main-menu.png) *Screenshot of the main menu*
+![Main Menu](/milestone-2-rollinswilliam/images/mainmenu.jpeg) *Screenshot of the main menu*
 
 ### Numbush Game
-![Numbush Game](images/screenshots/numbush.png) *Screenshot of the number guessing game*
+![Numbush Game](/milestone-2-rollinswilliam/images/click.jpeg) *Screenshot of the number guessing game*
 
-### JakePo Game
-![JakePo Game](images/screenshots/jakepo.png) *Screenshot of the rock-paper-scissors game*
+### FindMeow Game
+![FindMeow Game](/milestone-2-rollinswilliam/images/) *Screenshot of Guest the Number game*
 
 ### MeowCage Game
-![MeowCage Game](images/screenshots/meowcage.png) *Screenshot of the memory game*
+![MeowCage Game](/milestone-2-rollinswilliam/images/cg.jpeg) *Screenshot of the memory game*
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 1. Fork the repository
-2. Create a new branch for your feature (`git checkout -b feature/AmazingFeature`)
+2. Create a new branch for your feature
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-- [RevoU](https://revou.co/) - For the opportunity to create this project
-- Google Fonts - For the beautiful typography
-- All open-source libraries and resources used in this project
-
-## Author
-[Your Name] - [GitHub Profile](https://github.com/yourusername)
-
-## Contact
-For any inquiries or feedback, please contact [your-email@example.com]
-
----
 
 *Note: This is a demo project created for RevoU's Milestone 2 Assignment. All game assets and code are for educational purposes only.*

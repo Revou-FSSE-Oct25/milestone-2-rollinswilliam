@@ -23,27 +23,85 @@
             <h2>MeowCaGe</h2>
             <div class="life-point">
                 <h3>Life Point:</h3>
-                <div id="lifePoint"></div>
+                <div id="lifePoint">
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                     <span class="heart">❤️</span>
                 </div>
+            </div>
+            <button id="startButton" class="start">Start Game</button>
             <div class="game-board" id="gameBoard">
-                <div><img src="/images/Icon/meowcage/paw1.png" alt="paw1" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw2.png" alt="paw2" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw3.png" alt="paw3" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw4.png" alt="paw4" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw5.png" alt="paw5" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw1.png" alt="paw1" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw2.png" alt="paw2" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw3.png" alt="paw3" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw4.png" alt="paw4" class="card"></div>
-                <div><img src="/images/Icon/meowcage/paw5.png" alt="paw5" class="card"></div>
+                <div id="cardContainer" class="hidden">
+                    <div class="card" data-paw="paw1.png"><img src="/images/Icon/meowcage/paw1.png" alt="paw1" class="card-img"></div>
+                    <div class="card" data-paw="paw2.png"><img src="/images/Icon/meowcage/paw2.png" alt="paw2" class="card-img"></div>
+                    <div class="card" data-paw="paw3.png"><img src="/images/Icon/meowcage/paw3.png" alt="paw3" class="card-img"></div>
+                    <div class="card" data-paw="paw4.png"><img src="/images/Icon/meowcage/paw4.png" alt="paw4" class="card-img"></div>
+                    <div class="card" data-paw="paw5.png"><img src="/images/Icon/meowcage/paw5.png" alt="paw5" class="card-img"></div>
+                    <div class="card" data-paw="paw1.png"><img src="/images/Icon/meowcage/paw1.png" alt="paw1" class="card-img"></div>
+                    <div class="card" data-paw="paw2.png"><img src="/images/Icon/meowcage/paw2.png" alt="paw2" class="card-img"></div>
+                    <div class="card" data-paw="paw3.png"><img src="/images/Icon/meowcage/paw3.png" alt="paw3" class="card-img"></div>
+                    <div class="card" data-paw="paw4.png"><img src="/images/Icon/meowcage/paw4.png" alt="paw4" class="card-img"></div>
+                    <div class="card" data-paw="paw5.png"><img src="/images/Icon/meowcage/paw5.png" alt="paw5" class="card-img"></div>    
+                </div>
+                <p id="timer">Timer: 3</p>
             </div>
             <div class="game-over" id="gameOver"></div>
         </div>
 
     </main>
-    <script src="/pages/meowcage/meowcage.js"></script>
+    <script>        
+        const gameBoard = document.getElementById('gameBoard');
+        const lifePoints = document.getElementById('lifePoint');
+        const Start = document.getElementById('startButton');
+        const cardContainer = document.getElementById('cardContainer');
+        const Timer = document.getElementById('timer');
+
+        let cards = Array.from(cardContainer.querySelectorAll('.card'));
+        let points = 3;
+        let timer = 3;             
+        let flippedCards = [];
+        let canFlip = false;           
+        let countDownId = null;
+
+        cardContainer.classList.add('hidden');
+        Timer.classList.add('hidden');
+        gameBoard.classList.add('hidden');
+
+//start Button
+        Start.addEventListener('click', () => {
+            cardContainer.classList.remove('hidden');
+            Start.classList.add('hidden');
+            Timer.classList.remove('hidden');
+            gameBoard.classList.remove('hidden');
+            cardContainer.classList.add('flipped');
+
+            function shuffleBoard() {
+            for (let i = cards.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cards[i], cards[j]] = [cards[j], cards[i]];
+            }
+            cardContainer.innerHTML = '';
+            cards.forEach(card => cardContainer.appendChild(card));
+            }
+
+            const countDown = setInterval(() => {
+                if (timer > 0) {
+                    timer--;
+                    Timer.textContent = `Timer: ${timer}`;
+                } else {
+                clearInterval(countDown);
+                Timer.classList.add('hidden');
+                cardContainer.classList.remove('hidden', 'flipped');
+
+                };
+            }, 1000);
+
+            shuffleBoard();
+        })
+        </script>
 </body>
 </html>
+
+//sorry sir, i cant :"
+//INI REAL tapi bukan madrid (NO Ai)
+//YANG Ai ada di meowcage.js

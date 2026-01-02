@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/findmeow/findmeow.css">
+    <title>FindMeow</title>
+     <!-- GoogleFont -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <header>
+        <h1>D'G</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><img src="/images/Icon/meowcage/homepage.png" alt="homepage-icon" class="homepage-icon"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="game-board">
+            <div class="bg-game" id="gameBoard">
+                <h2>Find Meow</h2>
+                <button id="startButton" class="start-button" type="button">Start</button>
+
+                <div id="infoGame" class="info-game">
+                    <p id="msg"></p>
+                    <p id="left"></p>
+
+                    <label for="guessNumber">Guess the number to find meow</label>
+                    <input type="number" id="guessNumber" placeholder="1 - 100" min="1" max="100">
+                    <div>
+                        <button type="button" id="submitBtn">Submit</button>
+                        <button type="button" id="resetBtn">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </main>
+</body>
+<script src="/pages/findmeow/findmeow.js">
+
+</script>
+</html>
